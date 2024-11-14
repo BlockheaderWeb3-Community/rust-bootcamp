@@ -1,4 +1,4 @@
-    fn main() {
+    pub fn main() {
         dynamic_converter();
     }
     
@@ -18,8 +18,10 @@
         let mut user_input_number = String::new();
         std::io::stdin().read_line(&mut user_input_number).unwrap();
         let input_number: i32 = user_input_number.trim().parse().unwrap();
-    
-    
+        unit(input_number);
+    }
+
+    pub fn unit(input_number: i32) {
         println!("Enter C for celcius or F for farenhite (this is the unit)");
         let mut user_input_temp = String::new();
         std::io::stdin().read_line(&mut user_input_temp).unwrap();
@@ -33,7 +35,7 @@
             println!("Hey, {} degrees farenhite in degrees celcius is: {}", input_number, result);
         } else {
             println!("NOT RECOGNIZED, PLS TRY AGAIN");
-            dynamic_converter();
+            unit(input_number);
         }
     }
 
