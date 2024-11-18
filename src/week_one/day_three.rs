@@ -1,3 +1,12 @@
+/**
+    Rust Bootcamp Day Two
+    - Primitive Data Types
+    - String Slice
+    - Booleans
+    - Integers
+    Hands-on: simple exercises to reinforce concepts
+*/
+
 // Write a program to calculate the factorial of a number.
 pub fn factorial(n: i32) -> i32 {
     // 1. Base case: Factorial of 0 and 1 is 1
@@ -17,7 +26,8 @@ pub fn is_prime(n: i32) -> bool {
     }
 
     // 2. Check divisibility by numbers from 2 to the square root of n
-    for i in 2..((n as f64).sqrt() as i32) + 1 {
+    // for i in 2..((n as f64).sqrt() as i32) + 1 {
+    for i in 2..n {
         if n % i == 0 {
             // 3. If n is divisible by any number in the range, it's not prime
             return false;
@@ -41,7 +51,7 @@ pub fn guessing_game() -> bool {
     std::io::stdin().read_line(&mut guess_input).unwrap();
 
     // 4. Convert the input string to an integer and store it in `guess`
-    let guess: i32 = guess_input.trim().parse().unwrap();
+    let guess: i32 = guess_input.trim().parse::<i32>().unwrap();
 
     // 5. Compare the `guess` with the `magic_number` using a match expression
     match guess.cmp(&magic_number) {

@@ -44,7 +44,7 @@ pub fn main() {
 
     // Boolean Data types
     // True or False
-    let is_bool: bool = false;
+    let _is_bool: bool = false;
 
     // Tuples
     // Unit, tuple, triple, quadruple, ...
@@ -55,7 +55,7 @@ pub fn main() {
 
     // Static Arrays
     // Arrays which their size cannot be mutated at runtime
-    let class: [i32; 11] = [1; 11];
+    let _class: [i32; 11] = [1; 11];
 
     // Heap allocation is used for dynamic memory allocation,
     // but it's generally less efficient due to the overhead of memory management.
@@ -96,11 +96,11 @@ pub fn main() {
     );
 }
 
-fn five() -> u8 {
+fn _five() -> u8 {
     5
 }
 
-fn sum(a: i32, b: i32) -> i32 {
+fn _sum(a: i32, b: i32) -> i32 {
     let c: u8 = 12;
     i32::from(c) + a + b
 }
